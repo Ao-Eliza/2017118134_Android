@@ -10,13 +10,17 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Hello2 extends AppCompatActivity implements View.OnClickListener {
 
-    private static final String TAG = "Hello2";
+    private static final String TAG = "Hello2-";
+    private static int objCount = 0;
+    private int mobjCount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hello2);
-        Log.d(TAG, "onCreate");
+        objCount++;
+        mobjCount = objCount;
+        Log.d(TAG, mobjCount + "-onCreate");
         setTitle("Hello2");
         setupClicks();
     }
@@ -35,31 +39,32 @@ public class Hello2 extends AppCompatActivity implements View.OnClickListener {
     @Override
     protected void onStart() {
         super.onStart();
-        Log.d(TAG, "onStart");
+        Log.d(TAG, mobjCount + "-onStart");
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        Log.d(TAG, "onPause");
+        Log.d(TAG, mobjCount + "-onPause");
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        Log.d(TAG, "onResume");
+        Log.d(TAG, mobjCount + "-onResume");
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        Log.d(TAG, "onStop");
+        Log.d(TAG, mobjCount + "-onStop");
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Log.d(TAG, "onDestroy");
+        mobjCount--;
+        Log.d(TAG, mobjCount + "-onDestroy");
     }
 
     @Override

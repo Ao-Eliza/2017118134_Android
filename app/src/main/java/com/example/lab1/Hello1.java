@@ -8,20 +8,25 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Hello1 extends AppCompatActivity implements View.OnClickListener {
+public class Hello1 extends AppCompatActivity implements View.OnClickListener {//添加点击事件监听器
 
-    private static final String TAG = "Hello1";//这个是干嘛用的
+
+    private static final String TAG = "Hello1-";//在控制台那边输出对应模块，便于查看日志
+    private static int objCount = 0;
+    private int mobjCount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Log.d(TAG, "onCreate");
+        objCount++;
+        mobjCount = objCount;
+        Log.d(TAG, mobjCount + "-onCreate");
         setTitle("Hello1");
         setupClicks();
     }
 
-    private void setupClicks() {
+    private void setupClicks() {//监听点击事件
         Button b;
 
         b = (Button) findViewById(R.id.btToHello1);
@@ -35,31 +40,32 @@ public class Hello1 extends AppCompatActivity implements View.OnClickListener {
     @Override
     protected void onStart() {
         super.onStart();
-        Log.d(TAG, "onStart");
+        Log.d(TAG, mobjCount + "-onStart");
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        Log.d(TAG, "onPause");
+        Log.d(TAG, mobjCount + "-onPause");
     }
 
     @Override
-    protected void onResume() {
+    protected void onResume() {//中断后重新开始
         super.onResume();
-        Log.d(TAG, "onResume");
+        Log.d(TAG, mobjCount + "-onResume");
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        Log.d(TAG, "onStop");
+        Log.d(TAG, mobjCount + "-onStop");
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Log.d(TAG, "onDestroy");
+        objCount--;
+        Log.d(TAG, mobjCount + "-onDestroy");
     }
 
     @Override
