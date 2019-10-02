@@ -13,7 +13,7 @@
         <activity android:name=".Hello2" />
         <activity
             android:name=".Hello1"
-            android:launchMode="singleTask">
+            android:launchMode="singleTop">
             <intent-filter><!--表示Hello1是这个项目的主活动，首先启动-->
                 <action android:name="android.intent.action.MAIN" />
 
