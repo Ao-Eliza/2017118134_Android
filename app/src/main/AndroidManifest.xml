@@ -13,7 +13,7 @@
         <activity android:name=".Hello2" />
         <activity
             android:name=".Hello1"
-            android:launchMode="singleInstance">
+            android:launchMode="singleInstance"><!--单实例：当前活动只会创建一次，其他的活动可再创建；也就是说这个属性会跟着活动走-->
             <intent-filter><!--表示Hello1是这个项目的主活动，首先启动-->
                 <action android:name="android.intent.action.MAIN" />
 

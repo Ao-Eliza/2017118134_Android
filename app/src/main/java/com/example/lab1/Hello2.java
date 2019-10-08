@@ -63,7 +63,7 @@ public class Hello2 extends AppCompatActivity implements View.OnClickListener {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        mobjCount--;
+        objCount--;
         Log.d(TAG, mobjCount + "-onDestroy");
     }
 
