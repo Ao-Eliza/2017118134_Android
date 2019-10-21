@@ -1,6 +1,7 @@
 package com.example.lab1;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -35,6 +36,13 @@ public class Hello1 extends AppCompatActivity implements View.OnClickListener {/
         b.setOnClickListener(this);
         b = (Button) findViewById(R.id.btToHello3);
         b.setOnClickListener(this);
+        b = (Button) findViewById(R.id.call);
+        b.setOnClickListener(this);
+        b = (Button) findViewById(R.id.map);
+        b.setOnClickListener(this);
+        b = (Button) findViewById(R.id.website);
+        b.setOnClickListener(this);
+
     }
 
     @Override
@@ -82,6 +90,23 @@ public class Hello1 extends AppCompatActivity implements View.OnClickListener {/
         }
         if (v.getId() == R.id.btToHello3) {
             intent = new Intent(this, Hello3.class);
+            String str1 = "android.intent.action.MAIN";
+            startActivity(intent);
+        }
+        if (v.getId() == R.id.call) {
+            intent = new Intent(Intent.ACTION_DIAL);
+            intent.setData(Uri.parse("tel:" + "888888"));
+            startActivity(intent);
+        }
+        //简单的打开谷歌地图
+        if (v.getId() == R.id.map) {
+            Uri uri = Uri.parse("geo:38.899533,-77.036476");
+            intent = new Intent(Intent.ACTION_VIEW, uri);
+            startActivity(intent);
+        }
+        if (v.getId() == R.id.website) {
+            intent = new Intent(Intent.ACTION_VIEW);
+            intent.setData(Uri.parse("http://www.baidu.com"));
             startActivity(intent);
         }
     }
