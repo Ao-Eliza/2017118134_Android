@@ -30,17 +30,17 @@ public class Hello1 extends AppCompatActivity implements View.OnClickListener {/
     private void setupClicks() {//监听点击事件
         Button b;
 
-        b = (Button) findViewById(R.id.btToHello1);
+        b = findViewById(R.id.btToHello1);
         b.setOnClickListener(this);
-        b = (Button) findViewById(R.id.btToHello2);
+        b = findViewById(R.id.btToHello2);
         b.setOnClickListener(this);
-        b = (Button) findViewById(R.id.btToHello3);
+        b = findViewById(R.id.btToHello3);
         b.setOnClickListener(this);
-        b = (Button) findViewById(R.id.call);
+        b = findViewById(R.id.call);
         b.setOnClickListener(this);
-        b = (Button) findViewById(R.id.map);
+        b = findViewById(R.id.map);
         b.setOnClickListener(this);
-        b = (Button) findViewById(R.id.website);
+        b = findViewById(R.id.website);
         b.setOnClickListener(this);
 
     }

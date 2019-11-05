@@ -13,7 +13,7 @@
         android:orientation="vertical">
 
         <LinearLayout
-            android:id="@+id/ly2"
+            android:id="@+id/line1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -47,11 +47,11 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/ly3"
+            android:id="@+id/line3_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintEnd_toStartOf="@id/ly2"
+            app:layout_constraintEnd_toStartOf="@id/line1"
             android:layout_marginTop="400dp">
 
             <Button
@@ -59,7 +59,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="58dp"
                 android:layout_weight="1"
-                android:background="#03A9F4"
+                android:background="#8BC34A"
                 android:text="拨号" />
 
             <Button
@@ -67,7 +67,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="58dp"
                 android:layout_weight="1"
-                android:background="#03A9F4"
+                android:background="#8BC34A"
                 android:text="查看地图"
                 android:layout_marginTop="10dp" />
 
@@ -76,7 +76,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="58dp"
                 android:layout_weight="1"
-                android:background="#03A9F4"
+                android:background="#8BC34A"
                 android:text="百度一下"
                 android:layout_marginTop="10dp" />
         </LinearLayout>

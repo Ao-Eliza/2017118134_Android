@@ -6,32 +6,37 @@
     tools:context=".Hello3">
 
     <LinearLayout
-        android:id="@+id/ly3"
+        android:id="@+id/hello3"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal"
-        tools:layout_editor_absoluteX="-33dp"
-        tools:layout_editor_absoluteY="175dp">
+        android:orientation="vertical">
 
-        <Button
-            android:id="@+id/btToHello1"
-            android:layout_width="125dp"
-            android:layout_height="58dp"
-            android:text="btToHello1" />
+        <LinearLayout
+            android:id="@+id/line3_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/btToHello2"
-            android:layout_width="125dp"
-            android:layout_height="58dp"
-            android:layout_weight="1"
-            android:text="btToHello2" />
+            <Button
+                android:id="@+id/btToHello1"
+                android:layout_width="125dp"
+                android:layout_height="58dp"
+                android:text="btToHello1" />
 
-        <Button
-            android:id="@+id/btToHello3"
-            android:layout_width="125dp"
-            android:layout_height="58dp"
-            android:layout_weight="1"
-            android:text="btToHello3" />
+            <Button
+                android:id="@+id/btToHello2"
+                android:layout_width="125dp"
+                android:layout_height="58dp"
+                android:layout_weight="1"
+                android:text="btToHello2" />
+
+            <Button
+                android:id="@+id/btToHello3"
+                android:layout_width="125dp"
+                android:layout_height="58dp"
+                android:layout_weight="1"
+                android:text="btToHello3" />
+        </LinearLayout>
     </LinearLayout>
 
 
