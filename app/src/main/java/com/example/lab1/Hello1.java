@@ -90,7 +90,6 @@ public class Hello1 extends AppCompatActivity implements View.OnClickListener {/
         }
         if (v.getId() == R.id.btToHello3) {
             intent = new Intent(this, Hello3.class);
-            String str1 = "android.intent.action.MAIN";
             startActivity(intent);
         }
         if (v.getId() == R.id.call) {

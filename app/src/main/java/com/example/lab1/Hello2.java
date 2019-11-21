@@ -4,8 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -17,11 +19,10 @@ public class Hello2 extends AppCompatActivity implements View.OnClickListener {
     private static final String TAG = "Hello2-";
     private static int objCount = 0;
     private int mobjCount;
-    //水果数据
-    private List<Hello2_fruit> fruitList = new ArrayList<Hello2_fruit>();
+
+    private List<Hello2_fruit> fruitList = new ArrayList<Hello2_fruit>();//水果数据
 
     @Override
-
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hello2);
@@ -38,6 +39,14 @@ public class Hello2 extends AppCompatActivity implements View.OnClickListener {
         Hello2_fruitAdapter adapter = new Hello2_fruitAdapter(Hello2.this, R.layout.activity_hello2_fruit, fruitList);
         ListView listView = (ListView) findViewById(R.id.fruitList);
         listView.setAdapter(adapter);
+        //添加ListView点击事件
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Hello2_fruit fruit = fruitList.get(position);
+                Toast.makeText(Hello2.this, fruit.getName(), Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     private void initFruits() {
