@@ -19,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
         initFruits();
         RecyclerView recyclerView = findViewById(R.id.recycle_view);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        //LinearLayoutManager的setOrientation()设置布局的排列方向，默认是纵向排列
+        layoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
         recyclerView.setLayoutManager(layoutManager);
         FruitAdapter adapter = new FruitAdapter(fruitList);
         recyclerView.setAdapter(adapter);
