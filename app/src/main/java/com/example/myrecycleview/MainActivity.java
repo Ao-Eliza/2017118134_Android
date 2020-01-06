@@ -7,14 +7,10 @@ import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 import android.os.Bundle;
 import android.view.ContextMenu;
 import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.PopupMenu;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,14 +38,14 @@ public class MainActivity extends AppCompatActivity {
         registerForContextMenu(name);
     }
 
-    public void onCreateContextMenu(ContextMenu menu; View v;ContextMenu.ContextMenuInfo menuInfo){
+    /*public void onCreateContextMenu(ContextMenu menu; View v;ContextMenu.ContextMenuInfo menuInfo){
         getMenuInflater().inflate(R.menu.menu_button, menu);
         menu.add(0, Menu.FIRST+1, 1, "增加");
         menu.add(0, Menu.FIRST+2, 2, "删除");
         menu.add(0, Menu.FIRST+3, 3, "修改");
 
         super.onCreateContextMenu(menu, v, menuInfo);
-    }
+    }*/
 
     public boolean onContextItemSelected(MenuItem item){
         if(item.getItemId() == R.id.fruit_image){
