@@ -11,5 +11,6 @@ Android项目
 3、第三次提交   
   用RecycleView实现瀑布流布局，还有对数据的增删改操作。   
      
-	 运行图片   
-	 ![Image text](https://raw.githubusercontent.com/Ao-Eliza/2017118134_Android/MyRecyclerView/images/1.png)
+	 运行图片     
+   ![Image text](https://raw.githubusercontent.com/Ao-Eliza/2017118134_Android/MyRecyclerView/images/1.png)	    
+   
