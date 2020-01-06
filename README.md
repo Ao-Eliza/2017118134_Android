@@ -9,4 +9,7 @@ Android项目
   用RecycleView实现横向滚动。   
   
 3、第三次提交   
-  用RecycleView实现瀑布流布局，还有对数据的增删改操作。
+  用RecycleView实现瀑布流布局，还有对数据的增删改操作。   
+     
+	 运行图片   
+	 ![image](images/1.png)
