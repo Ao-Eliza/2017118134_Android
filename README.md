@@ -1,14 +1,10 @@
 # 2017118134_Android   
   
-  MyRecycleView   
+  MyAndroidThread   
    
-1、第一次提交   
-  RecycleView实现竖向滚动，和ListView一样的效果。   
-
-2、第二次提交   
-  用RecycleView实现横向滚动。   
-
-3、第三次提交   
-  用RecycleView实现瀑布流布局，还有对数据的增删改操作。   
+1、多线程编程，在一定秒数内自加，自加之后可回溯   
+   运行图片   
+![image](https://raw.githubusercontent.com/Ao-Eliza/2017118134_Android/MyAndroidThread/images/1.png)
+![image](https://raw.githubusercontent.com/Ao-Eliza/2017118134_Android/MyAndroidThread/images/2.png)    
   
 
