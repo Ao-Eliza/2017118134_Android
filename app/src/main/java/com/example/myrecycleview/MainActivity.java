@@ -1,11 +1,20 @@
 package com.example.myrecycleview;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import android.os.Bundle;
+import android.view.ContextMenu;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.MotionEvent;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.PopupMenu;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,6 +22,8 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
     private List<Fruit> fruitList = new ArrayList<>();
+    private ImageView imageId;
+    private TextView name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,8 +35,28 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
         FruitAdapter adapter = new FruitAdapter(fruitList);
         recyclerView.setAdapter(adapter);
+        //注册长按点击事件
+        imageId = findViewById(R.id.fruit_image);
+        name = findViewById(R.id.fruit_name);
+        registerForContextMenu(imageId);
+        registerForContextMenu(name);
     }
 
+    public void onCreateContextMenu(ContextMenu menu; View v;ContextMenu.ContextMenuInfo menuInfo){
+        getMenuInflater().inflate(R.menu.menu_button, menu);
+        menu.add(0, Menu.FIRST+1, 1, "增加");
+        menu.add(0, Menu.FIRST+2, 2, "删除");
+        menu.add(0, Menu.FIRST+3, 3, "修改");
+
+        super.onCreateContextMenu(menu, v, menuInfo);
+    }
+
+    public boolean onContextItemSelected(MenuItem item){
+        if(item.getItemId() == R.id.fruit_image){
+
+        }
+        return super.onContextItemSelected(item);
+    }
     private void initFruits(){
         for(int i = 0; i < 2; i++){
             Fruit apple = new Fruit(getRandomLengthName("Apple"), R.drawable.apple_pic);

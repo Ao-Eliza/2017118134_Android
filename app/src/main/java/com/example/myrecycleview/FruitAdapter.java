@@ -1,10 +1,12 @@
 package com.example.myrecycleview;
 
-import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -12,7 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-public class FruitAdapter extends RecyclerView.Adapter<FruitAdapter.ViewHolder> {
+public class FruitAdapter extends RecyclerView.Adapter<FruitAdapter.ViewHolder>  {
     private List<Fruit> mFruitList;
 
     //ViewHolder是一个内部类，在它的构造函数中需加入View，view用来获取布局中的ImageView和TextView
@@ -41,8 +43,8 @@ public class FruitAdapter extends RecyclerView.Adapter<FruitAdapter.ViewHolder> 
     holder.fruitImage.setOnClickListener(new View.OnClickListener(){
         @Override
         public void onClick(View v){
-        int position = holder.getAdapterPosition();
-        Fruit fruit = mFruitList.get(position);
+            int position = holder.getAdapterPosition();
+            Fruit fruit = mFruitList.get(position);
             Toast.makeText(v.getContext(), "The image you clicked is "+fruit.getName(), Toast.LENGTH_SHORT).show();
         }
     });
@@ -70,4 +72,5 @@ public class FruitAdapter extends RecyclerView.Adapter<FruitAdapter.ViewHolder> 
     public int getItemCount(){
         return mFruitList.size();
     }
+
 }
